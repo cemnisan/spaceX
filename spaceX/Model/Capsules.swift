@@ -9,8 +9,11 @@ import Foundation
 
 
 // MARK: - Rockets Response Model
-struct CapsulesResponse:Codable {
-    let capsuleSerial, capsuleID, status, originalLaunch: String?
+struct Capsules:Codable {
+    let capsuleSerial: String?
+    let capsuleID:String?
+    let status:String?
+    let originalLaunch:String?
     let originalLaunchUnix: Int?
     let missions: [CapsuleMission]?
     let landings: Int?

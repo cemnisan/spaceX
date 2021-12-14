@@ -26,6 +26,8 @@
 		F8416B5B276374270030C4E5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B5A276374270030C4E5 /* NetworkError.swift */; };
 		F8416B5D276374550030C4E5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B5C276374550030C4E5 /* NetworkManager.swift */; };
 		F8416B5F276379A30030C4E5 /* Capsules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B5E276379A30030C4E5 /* Capsules.swift */; };
+		F8484E812768CCA80033F27E /* CapsulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8484E7F2768CCA80033F27E /* CapsulesTableViewCell.swift */; };
+		F8484E822768CCA80033F27E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8484E802768CCA80033F27E /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F8416B5A276374270030C4E5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F8416B5C276374550030C4E5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F8416B5E276379A30030C4E5 /* Capsules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsules.swift; sourceTree = "<group>"; };
+		F8484E7F2768CCA80033F27E /* CapsulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulesTableViewCell.swift; sourceTree = "<group>"; };
+		F8484E802768CCA80033F27E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 		F8416B502763706B0030C4E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8484E832768DF8B0033F27E /* Cell */,
 				F8416B202763702A0030C4E5 /* CapsulesViewController.swift */,
 			);
 			path = View;
@@ -246,6 +251,15 @@
 				F8416B53276371070030C4E5 /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		F8484E832768DF8B0033F27E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8484E7F2768CCA80033F27E /* CapsulesTableViewCell.swift */,
+				F8484E802768CCA80033F27E /* TableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8416B292763702A0030C4E5 /* LaunchScreen.storyboard in Resources */,
+				F8484E822768CCA80033F27E /* TableViewCell.xib in Resources */,
 				F8416B262763702A0030C4E5 /* Assets.xcassets in Resources */,
 				F8416B242763702A0030C4E5 /* Main.storyboard in Resources */,
 			);
@@ -389,6 +404,7 @@
 				F8416B212763702A0030C4E5 /* CapsulesViewController.swift in Sources */,
 				F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */,
 				F8416B56276371970030C4E5 /* NetworkRouter.swift in Sources */,
+				F8484E812768CCA80033F27E /* CapsulesTableViewCell.swift in Sources */,
 				F8416B5F276379A30030C4E5 /* Capsules.swift in Sources */,
 				F81775BB27653F0600AD1658 /* HTTPContentType.swift in Sources */,
 				F8416B5D276374550030C4E5 /* NetworkManager.swift in Sources */,

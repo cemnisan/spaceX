@@ -7,8 +7,22 @@
 
 import Foundation
 
-struct Constant {
-    static let baseUrl = "https://api.spacexdata.com/v3"
+struct K {
+    
+    struct App {
+        static let nibName = "TableViewCell"
+        static let reuseIdentifier = "capsulesReuse"
+    }
+    
+    struct API {
+        static let baseUrl = "https://api.spacexdata.com/v3"
+    }
+    
+    enum SegmentTitle: String {
+        case allCapsules = "All Capsules"
+        case upComing = "Up Coming"
+        case past = "Past"
+    }
 }
 
 

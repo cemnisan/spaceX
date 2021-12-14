@@ -8,16 +8,18 @@
 import Foundation
 import Alamofire
 
-public typealias Completion<M> = (Result<M, NetworkError>) -> Void where M: Codable
+public typealias Completion<T> = (Result<T, NetworkError>) -> Void where T: Codable
 
 public final class NetworkManager {
     public static let shared = NetworkManager()
+    
+    private init() {}
 }
 
 extension NetworkManager {
-    func request<M: Codable>(requestRoute: NetworkRouter,
-                                   responseModel: M.Type,
-                                   completion: @escaping Completion<M>) {
+    func request<T: Codable>(requestRoute: NetworkRouter,
+                                   responseModel: T.Type,
+                                   completion: @escaping Completion<T>) {
        do {
            let urlRequest = try requestRoute.asURLRequest()
            

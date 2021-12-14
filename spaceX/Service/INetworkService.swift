@@ -8,5 +8,7 @@
 import Foundation
 
 protocol INetworkService {
-    func getCapsules(completion: @escaping (Result<[CapsulesResponse], NetworkError>) -> Void)
+    func getCapsules(completion: @escaping (Result<[Capsules], NetworkError>) -> Void)
+    func getUpComingCapsules(completion: @escaping (Result<[Capsules], NetworkError>) -> Void)
+    func getPastCapsules(completion: @escaping (Result<[Capsules], NetworkError>) -> Void)
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="CapsulesTableViewCell" customModule="spaceX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OC-19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgP-Xf-9iX">
+                        <rect key="frame" x="20" y="8" width="358" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First of twenty missions flown under the CRS1 contract" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-Vb-XBy">
+                        <rect key="frame" x="20" y="37" width="298" height="41"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-Kj-Vvu">
+                        <rect key="frame" x="326" y="40" width="65" height="30"/>
+                        <state key="normal" title="unkown"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="YPZ-Vb-XBy" secondAttribute="trailing" constant="80" id="0xu-wq-X17"/>
+                    <constraint firstAttribute="trailing" secondItem="jgP-Xf-9iX" secondAttribute="trailing" constant="20" symbolic="YES" id="78N-gB-oS4"/>
+                    <constraint firstItem="YPZ-Vb-XBy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="Aa1-Hb-tnX"/>
+                    <constraint firstItem="YPZ-Vb-XBy" firstAttribute="top" secondItem="jgP-Xf-9iX" secondAttribute="bottom" constant="8" symbolic="YES" id="Aer-sC-cZz"/>
+                    <constraint firstItem="GU7-Kj-Vvu" firstAttribute="leading" secondItem="YPZ-Vb-XBy" secondAttribute="trailing" constant="8" symbolic="YES" id="EGf-iu-v7B"/>
+                    <constraint firstAttribute="bottom" secondItem="GU7-Kj-Vvu" secondAttribute="bottom" constant="41" id="SXw-js-CBw"/>
+                    <constraint firstAttribute="bottom" secondItem="YPZ-Vb-XBy" secondAttribute="bottom" constant="33" id="VPi-LP-IPg"/>
+                    <constraint firstItem="jgP-Xf-9iX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="jJz-X3-xWM"/>
+                    <constraint firstAttribute="trailing" secondItem="GU7-Kj-Vvu" secondAttribute="trailing" constant="7" id="ol3-v4-cj4"/>
+                    <constraint firstItem="GU7-Kj-Vvu" firstAttribute="top" secondItem="jgP-Xf-9iX" secondAttribute="bottom" constant="11" id="qWs-cB-TwV"/>
+                    <constraint firstItem="jgP-Xf-9iX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vQS-47-kGr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="capsulesDetailLabel" destination="YPZ-Vb-XBy" id="8b4-ou-Aet"/>
+                <outlet property="capsulesMissionLabel" destination="jgP-Xf-9iX" id="NBf-eq-bmc"/>
+                <outlet property="capsulesStatus" destination="GU7-Kj-Vvu" id="FnF-pd-xQ9"/>
+            </connections>
+            <point key="canvasLocation" x="186.95652173913044" y="138.28125"/>
+        </tableViewCell>
+    </objects>
+</document>

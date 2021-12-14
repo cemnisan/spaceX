@@ -45,7 +45,7 @@ public enum NetworkRouter: URLRequestConvertible {
     }
     
     public func asURLRequest() throws -> URLRequest {
-        let url = try Constant.baseUrl.asURL()
+        let url = try K.API.baseUrl.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         

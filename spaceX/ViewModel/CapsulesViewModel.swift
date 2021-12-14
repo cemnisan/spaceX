@@ -9,15 +9,17 @@ import Foundation
 
 protocol ICapsulesViewModel {
     var networkService: INetworkService { get }
-    var capsules:[CapsulesResponse] { get }
+    var capsules:[Capsules] { get }
     
     func fetchCapsules()
+    func fetchUpComingCapsules()
+    func fetchPastCapsules()
 }
 
 final class CapsulesViewModel: ICapsulesViewModel {
-    var capsules: [CapsulesResponse] = []
+    var capsules: [Capsules] = []
     var networkService: INetworkService
-    var delegate: ICapsulesViewController?
+    weak var delegate: ICapsulesViewController?
     
     init(networkService:INetworkService, delegate: ICapsulesViewController) {
         self.networkService = networkService
@@ -29,11 +31,39 @@ final class CapsulesViewModel: ICapsulesViewModel {
             guard let self = self, let delegate = self.delegate else { return }
             
             switch result {
-            case .success(let data):
-                self.capsules = data
-                delegate.showCapsules(capsules: self.capsules)
-            case .failure(let error):
-                delegate.showError(error: error)
+                case .success(let data):
+                    self.capsules = data
+                    delegate.showCapsules(capsules: self.capsules)
+                case .failure(let error):
+                    delegate.showError(error: error)
+            }
+        }
+    }
+    
+    func fetchUpComingCapsules() {
+        networkService.getUpComingCapsules { [weak self] (result) in
+            guard let self = self, let delegate = self.delegate else { return }
+            
+            switch result {
+                case .success(let data):
+                    self.capsules = data
+                    delegate.showCapsules(capsules: self.capsules)
+                case .failure(let error):
+                    delegate.showError(error: error)
+            }
+        }
+    }
+    
+    func fetchPastCapsules() {
+        networkService.getPastCapsules { [weak self] (result) in
+            guard let self = self, let delegate = self.delegate else { return }
+            
+            switch result {
+                case .success(let data):
+                    self.capsules = data
+                    delegate.showCapsules(capsules: self.capsules)
+                case .failure(let error):
+                    delegate.showError(error: error)
             }
         }
     }
