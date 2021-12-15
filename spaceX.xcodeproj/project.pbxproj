@@ -12,6 +12,8 @@
 		F81775BB27653F0600AD1658 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BA27653F0600AD1658 /* HTTPContentType.swift */; };
 		F81775BD27653F1A00AD1658 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BC27653F1A00AD1658 /* HTTPHeader.swift */; };
 		F81775BF27653FAC00AD1658 /* INetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BE27653FAC00AD1658 /* INetworkService.swift */; };
+		F8191A30276A4BC000499C92 /* CapsulesStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */; };
+		F8191A34276A4C8F00499C92 /* ICapsulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8191A33276A4C8F00499C92 /* ICapsulesViewModel.swift */; };
 		F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B1C2763702A0030C4E5 /* AppDelegate.swift */; };
 		F8416B1F2763702A0030C4E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B1E2763702A0030C4E5 /* SceneDelegate.swift */; };
 		F8416B212763702A0030C4E5 /* CapsulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B202763702A0030C4E5 /* CapsulesViewController.swift */; };
@@ -53,6 +55,8 @@
 		F81775BA27653F0600AD1658 /* HTTPContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
 		F81775BC27653F1A00AD1658 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		F81775BE27653FAC00AD1658 /* INetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkService.swift; sourceTree = "<group>"; };
+		F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulesStatus.swift; sourceTree = "<group>"; };
+		F8191A33276A4C8F00499C92 /* ICapsulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICapsulesViewModel.swift; sourceTree = "<group>"; };
 		F8416B192763702A0030C4E5 /* spaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8416B1C2763702A0030C4E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8416B1E2763702A0030C4E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,14 @@
 			path = HTTP;
 			sourceTree = "<group>";
 		};
+		F8191A31276A4BEC00499C92 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F8416B10276370290030C4E5 = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +171,10 @@
 		F8416B1B2763702A0030C4E5 /* spaceX */ = {
 			isa = PBXGroup;
 			children = (
+				F8191A31276A4BEC00499C92 /* Helper */,
 				F8416B4C276370340030C4E5 /* App */,
 				F8416B512763708E0030C4E5 /* Manager */,
 				F8416B52276370F60030C4E5 /* Constant */,
-				F8416B4D2763703F0030C4E5 /* Sources */,
 				F8416B4E2763704D0030C4E5 /* Model */,
 				F8416B502763706B0030C4E5 /* View */,
 				F8416B4F276370510030C4E5 /* ViewModel */,
@@ -193,6 +205,7 @@
 		F8416B4C276370340030C4E5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F8416B4D2763703F0030C4E5 /* Sources */,
 				F8416B1E2763702A0030C4E5 /* SceneDelegate.swift */,
 				F8416B1C2763702A0030C4E5 /* AppDelegate.swift */,
 			);
@@ -221,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				F81775B227652CBA00AD1658 /* CapsulesViewModel.swift */,
+				F8191A33276A4C8F00499C92 /* ICapsulesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -402,10 +416,12 @@
 				F81775BD27653F1A00AD1658 /* HTTPHeader.swift in Sources */,
 				F81775B62765349500AD1658 /* NetworkService.swift in Sources */,
 				F8416B212763702A0030C4E5 /* CapsulesViewController.swift in Sources */,
+				F8191A30276A4BC000499C92 /* CapsulesStatus.swift in Sources */,
 				F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */,
 				F8416B56276371970030C4E5 /* NetworkRouter.swift in Sources */,
 				F8484E812768CCA80033F27E /* CapsulesTableViewCell.swift in Sources */,
 				F8416B5F276379A30030C4E5 /* Capsules.swift in Sources */,
+				F8191A34276A4C8F00499C92 /* ICapsulesViewModel.swift in Sources */,
 				F81775BB27653F0600AD1658 /* HTTPContentType.swift in Sources */,
 				F8416B5D276374550030C4E5 /* NetworkManager.swift in Sources */,
 				F8416B5B276374270030C4E5 /* NetworkError.swift in Sources */,

@@ -30,7 +30,14 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-Kj-Vvu">
                         <rect key="frame" x="326" y="40" width="65" height="30"/>
-                        <state key="normal" title="unkown"/>
+                        <color key="backgroundColor" red="0.15273624659999999" green="0.52811932559999997" blue="0.32892116900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="9lt-Rb-OA4"/>
+                            <constraint firstAttribute="height" constant="30" id="Qd3-Af-eax"/>
+                        </constraints>
+                        <state key="normal" title="active">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>
