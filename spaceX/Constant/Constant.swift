@@ -15,7 +15,7 @@ struct K {
     }
     
     struct API {
-        static let baseUrl = "https://api.spacexdata.com/v3"
+        static let baseURL = "https://api.spacexdata.com/v3"
     }
     
     enum SegmentTitle: String {
@@ -23,6 +23,7 @@ struct K {
         case upComing = "Up Coming"
         case past = "Past"
     }
+    
 }
 
 

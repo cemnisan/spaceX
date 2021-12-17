@@ -27,4 +27,5 @@ enum CapsulesStatus {
             return nil
         }
     }
+    
 }

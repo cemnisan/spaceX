@@ -15,7 +15,7 @@ public enum NetworkRouter: URLRequestConvertible {
     case pastCapsules
     
     // MARK: - HTTPMethod
-    public var method: HTTPMethod {
+    private var method: HTTPMethod {
         switch self {
         case .capsules, .capsule, .upComingCapsules, .pastCapsules:
             return .get
@@ -23,7 +23,7 @@ public enum NetworkRouter: URLRequestConvertible {
     }
     
     // MARK: - URLPath
-    public var path: String {
+    private var path: String {
         switch self {
         case .capsules:
             return "/capsules"
@@ -36,8 +36,12 @@ public enum NetworkRouter: URLRequestConvertible {
         }
     }
     
+    private var baseURL: String {
+        return K.API.baseURL
+    }
+    
     // MARK: - Parameters
-    public var parameters: Parameters? {
+    private var parameters: Parameters? {
         switch self {
         case .capsules, .capsule, .upComingCapsules, .pastCapsules:
             return  nil
@@ -45,7 +49,7 @@ public enum NetworkRouter: URLRequestConvertible {
     }
     
     public func asURLRequest() throws -> URLRequest {
-        let url = try K.API.baseUrl.asURL()
+        let url = try baseURL.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         

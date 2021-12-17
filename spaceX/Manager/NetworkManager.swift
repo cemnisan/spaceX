@@ -17,6 +17,7 @@ public final class NetworkManager {
 }
 
 extension NetworkManager {
+    
     func request<T: Codable>(requestRoute: NetworkRouter,
                                    responseModel: T.Type,
                                    completion: @escaping Completion<T>) {
@@ -42,4 +43,5 @@ extension NetworkManager {
            completion(.failure(.badUrlError))
        }
    }
+    
 }

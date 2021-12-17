@@ -51,27 +51,23 @@ class CapsulesViewController: UIViewController {
     }
     
     @IBAction func onRefreshPressed(_ sender: Any) {
-    
+        
         if let title = segmentTitle {
             fetchCapsulesWithSegmentTitle(segmentTitle: title)
         } else {
             capsulesViewModel.fetchAllCapsules()
         }
-    
     }
     
     private func fetchCapsulesWithSegmentTitle(segmentTitle: String) {
-        switch segmentTitle {
         
+        switch segmentTitle {
         case K.SegmentTitle.allCapsules.rawValue:
             capsulesViewModel.fetchAllCapsules()
-          
         case K.SegmentTitle.upComing.rawValue:
             capsulesViewModel.fetchUpComingCapsules()
-    
         case K.SegmentTitle.past.rawValue:
             capsulesViewModel.fetchPastCapsules()
-       
         default:
             return
         }
@@ -107,33 +103,14 @@ extension CapsulesViewController: ICapsulesViewController {
 extension CapsulesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.spaceXCapsules.count
+        return spaceXCapsules.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = capsulesTableView.dequeueReusableCell(withIdentifier: K.App.reuseIdentifier, for: indexPath) as? CapsulesTableViewCell else { return UITableViewCell() }
         let capsule = spaceXCapsules[indexPath.row]
         
-        cell.capsulesDetailLabel.text = capsule.details != nil ? capsule.details : "unkown"
-        cell.capsulesStatus.setTitle(capsule.status, for: .normal)
-        
-        
-        if let status = CapsulesStatus.getStatus(status: capsule.status ?? "unkown") {
-            switch status {
-            case .active:
-                cell.capsulesStatus.backgroundColor = #colorLiteral(red: 0.1527362466, green: 0.5281193256, blue: 0.328921169, alpha: 1)
-            case .unkown:
-                cell.capsulesStatus.backgroundColor = #colorLiteral(red: 0.8625278473, green: 0.2073233128, blue: 0.2703085542, alpha: 1)
-            case .retired:
-                cell.capsulesStatus.backgroundColor = #colorLiteral(red: 0.04930239171, green: 0.4321121573, blue: 0.9915542006, alpha: 1)
-            case .destroyed:
-                cell.capsulesStatus.backgroundColor = #colorLiteral(red: 0.8625278473, green: 0.2073233128, blue: 0.2703085542, alpha: 1)
-            }
-        }
-        
-        if let mission = capsule.missions {
-            cell.capsulesMissionLabel.text = mission.isEmpty == false ? mission[0].name ?? "" : "unkown"
-        }
+        cell.configureUI(with: capsule)
         
         return cell
     }

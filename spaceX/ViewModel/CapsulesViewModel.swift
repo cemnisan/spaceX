@@ -67,4 +67,5 @@ final class CapsulesViewModel: ICapsulesViewModel {
         isLoad = true
         self.delegate?.didUpdateIndicator(isLoad: isLoad)
     }
+    
 }
