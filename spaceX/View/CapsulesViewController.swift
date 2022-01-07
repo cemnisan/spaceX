@@ -22,6 +22,7 @@ class CapsulesViewController: UIViewController {
 
     private var segmentTitle:String?
     private var spaceXCapsules = [Capsules]()
+    
     private lazy var capsulesViewModel: CapsulesViewModel = {
         return CapsulesViewModel(networkService: NetworkService(), delegate: self)
     }()
@@ -35,7 +36,7 @@ class CapsulesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
        
-        capsulesViewModel.fetchAllCapsules()
+        fetchCapsules(with: "All Capsules")
     }
 }
 
@@ -52,7 +53,7 @@ extension CapsulesViewController {
     
     @IBAction func onRefreshPressed(_ sender: Any) {
         guard let title = segmentTitle else { return }
-        
+
         fetchCapsules(with: title)
     }
 }
@@ -62,6 +63,7 @@ extension CapsulesViewController {
     
     func fetchCapsules(with title: String) {
         let context = SelectContext.getContext(title)
+        
         context?.fetchCapsules(title, viewModel: capsulesViewModel)
     }
 }

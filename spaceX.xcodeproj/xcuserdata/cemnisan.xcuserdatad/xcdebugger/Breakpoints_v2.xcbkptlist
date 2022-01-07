@@ -3,4 +3,178 @@
    uuid = "47429B45-3A00-42D6-99CA-823D0E61D99D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26ADFA93-D688-4E71-AC34-D2CCF342C196"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "spaceX/View/CapsulesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7389673-BD1E-4E7F-BB6C-7236ECECEB1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "spaceX/View/CapsulesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "segmentPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8899528-34E6-445A-9E39-2E4C523B2A6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "spaceX/View/CapsulesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchCapsules(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "spaceX/View/CapsulesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "CapsulesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - f0823796a86f5445"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.spaceXCapsules.getter : Swift.Array&lt;spaceX.Capsules&gt;"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - aad3b7d71a298451"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.spaceXCapsules.setter : Swift.Array&lt;spaceX.Capsules&gt;"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - 3086e317420a8f28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.spaceXCapsules.modify : Swift.Array&lt;spaceX.Capsules&gt;"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - 202624f775dd5b94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.spaceXCapsules.modify : Swift.Array&lt;spaceX.Capsules&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - ed9120e9086a9fbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; spaceX.CapsulesViewController"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "45D614E2-AC06-4E4A-A885-05C8F9EB46DB - b39d7355336827f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spaceX.CapsulesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;spaceX.CapsulesViewController&gt;"
+                  moduleName = "spaceX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cemnisan/Desktop/software/spaceX/spaceX/View/CapsulesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "299955B3-AB20-4D8F-B61D-AF756E4E217E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "spaceX/View/CapsulesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
