@@ -1,6 +1,6 @@
 # spaceX
 
-A Mobile App. written is Swift. This ap uses spaceX API. For more information about the API visit https://docs.spacexdata.com/
+A Mobile App written in Swift. This ap uses spaceX API. For more information about the API visit https://docs.spacexdata.com/
 
 ## Used Packages
 
@@ -8,6 +8,7 @@ A Mobile App. written is Swift. This ap uses spaceX API. For more information ab
 
 This project uses MVVM as an architecture.
 
+## Screen
 ![](https://media.giphy.com/media/XnVDTzs2dIqAi11p37/giphy.gif)
 
 # Concentration
