@@ -10,3 +10,4 @@ This project uses MVVM as an architecture.
 
 ![](https://media.giphy.com/media/XnVDTzs2dIqAi11p37/giphy.gif)
 
+# Concentration

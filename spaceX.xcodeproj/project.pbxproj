@@ -30,6 +30,10 @@
 		F8416B5F276379A30030C4E5 /* Capsules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B5E276379A30030C4E5 /* Capsules.swift */; };
 		F8484E812768CCA80033F27E /* CapsulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8484E7F2768CCA80033F27E /* CapsulesTableViewCell.swift */; };
 		F8484E822768CCA80033F27E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8484E802768CCA80033F27E /* TableViewCell.xib */; };
+		F89F5ED82788624F0048747A /* SegmentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89F5ED72788624F0048747A /* SegmentContext.swift */; };
+		F89F5EDA278894220048747A /* SelectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89F5ED9278894220048747A /* SelectContext.swift */; };
+		F89F5EDD2788948E0048747A /* ISegmentStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89F5EDC2788948E0048747A /* ISegmentStrategy.swift */; };
+		F89F5EE0278894D60048747A /* SegmentConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89F5EDF278894D60048747A /* SegmentConcrete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		F8416B5E276379A30030C4E5 /* Capsules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsules.swift; sourceTree = "<group>"; };
 		F8484E7F2768CCA80033F27E /* CapsulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulesTableViewCell.swift; sourceTree = "<group>"; };
 		F8484E802768CCA80033F27E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		F89F5ED72788624F0048747A /* SegmentContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentContext.swift; sourceTree = "<group>"; };
+		F89F5ED9278894220048747A /* SelectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectContext.swift; sourceTree = "<group>"; };
+		F89F5EDC2788948E0048747A /* ISegmentStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISegmentStrategy.swift; sourceTree = "<group>"; };
+		F89F5EDF278894D60048747A /* SegmentConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConcrete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */,
+				F89F5ED9278894220048747A /* SelectContext.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 		F8416B1B2763702A0030C4E5 /* spaceX */ = {
 			isa = PBXGroup;
 			children = (
+				F89F5ED52788623B0048747A /* Patterns */,
 				F8191A31276A4BEC00499C92 /* Helper */,
 				F8416B4C276370340030C4E5 /* App */,
 				F8416B512763708E0030C4E5 /* Manager */,
@@ -274,6 +284,48 @@
 				F8484E802768CCA80033F27E /* TableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F89F5ED52788623B0048747A /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				F89F5ED6278862420048747A /* Strategies */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		F89F5ED6278862420048747A /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				F89F5EE1278894F70048747A /* Context */,
+				F89F5EDE278894C70048747A /* Concrete */,
+				F89F5EDB2788946F0048747A /* Protocols */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		F89F5EDB2788946F0048747A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F89F5EDC2788948E0048747A /* ISegmentStrategy.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F89F5EDE278894C70048747A /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				F89F5EDF278894D60048747A /* SegmentConcrete.swift */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
+		F89F5EE1278894F70048747A /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				F89F5ED72788624F0048747A /* SegmentContext.swift */,
+			);
+			path = Context;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,16 +471,20 @@
 				F8191A30276A4BC000499C92 /* CapsulesStatus.swift in Sources */,
 				F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */,
 				F8416B56276371970030C4E5 /* NetworkRouter.swift in Sources */,
+				F89F5EE0278894D60048747A /* SegmentConcrete.swift in Sources */,
 				F8484E812768CCA80033F27E /* CapsulesTableViewCell.swift in Sources */,
 				F8416B5F276379A30030C4E5 /* Capsules.swift in Sources */,
 				F8191A34276A4C8F00499C92 /* ICapsulesViewModel.swift in Sources */,
 				F81775BB27653F0600AD1658 /* HTTPContentType.swift in Sources */,
 				F8416B5D276374550030C4E5 /* NetworkManager.swift in Sources */,
 				F8416B5B276374270030C4E5 /* NetworkError.swift in Sources */,
+				F89F5EDD2788948E0048747A /* ISegmentStrategy.swift in Sources */,
 				F81775BF27653FAC00AD1658 /* INetworkService.swift in Sources */,
 				F81775B327652CBA00AD1658 /* CapsulesViewModel.swift in Sources */,
 				F8416B1F2763702A0030C4E5 /* SceneDelegate.swift in Sources */,
+				F89F5EDA278894220048747A /* SelectContext.swift in Sources */,
 				F8416B54276371070030C4E5 /* Constant.swift in Sources */,
+				F89F5ED82788624F0048747A /* SegmentContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

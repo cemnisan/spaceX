@@ -30,7 +30,7 @@ extension NetworkManager {
                    do {
                        let resultsData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
                        let jsonResults = try JSONDecoder().decode(responseModel, from: resultsData)
-                       
+        
                        completion(.success(jsonResults))
                    } catch {
                        completion(.failure(.parseError))

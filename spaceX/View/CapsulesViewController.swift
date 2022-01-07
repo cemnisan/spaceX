@@ -13,16 +13,12 @@ protocol ICapsulesViewController: AnyObject {
     func didFailWithError(error: NetworkError)
 }
 
+// MARK: - Initialize
 class CapsulesViewController: UIViewController {
     
+    @IBOutlet weak var loadingUIView: UIView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var capsulesTableView: UITableView! {
-        didSet {
-            capsulesTableView.dataSource = self
-            capsulesTableView.separatorStyle = .none
-            capsulesTableView.register(UINib(nibName: K.App.nibName, bundle: nil), forCellReuseIdentifier: K.App.reuseIdentifier)
-        }
-    }
+    @IBOutlet weak var capsulesTableView: UITableView!
 
     private var segmentTitle:String?
     private var spaceXCapsules = [Capsules]()
@@ -33,7 +29,7 @@ class CapsulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadingIndicator.isHidden = true
+        configureView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,52 +37,48 @@ class CapsulesViewController: UIViewController {
        
         capsulesViewModel.fetchAllCapsules()
     }
+}
+
+// MARK: - Buttons Pressed
+extension CapsulesViewController {
     
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {
         segmentTitle = sender.titleForSegment(at: sender.selectedSegmentIndex)
-       
-        if let title = segmentTitle {
-            fetchCapsulesWithSegmentTitle(segmentTitle: title)
-        }
+        
+        guard let title = segmentTitle else { return }
+        
+        fetchCapsules(with: title)
     }
     
     @IBAction func onRefreshPressed(_ sender: Any) {
+        guard let title = segmentTitle else { return }
         
-        if let title = segmentTitle {
-            fetchCapsulesWithSegmentTitle(segmentTitle: title)
-        } else {
-            capsulesViewModel.fetchAllCapsules()
-        }
+        fetchCapsules(with: title)
     }
-    
-    private func fetchCapsulesWithSegmentTitle(segmentTitle: String) {
-        
-        switch segmentTitle {
-        case K.SegmentTitle.allCapsules.rawValue:
-            capsulesViewModel.fetchAllCapsules()
-        case K.SegmentTitle.upComing.rawValue:
-            capsulesViewModel.fetchUpComingCapsules()
-        case K.SegmentTitle.past.rawValue:
-            capsulesViewModel.fetchPastCapsules()
-        default:
-            return
-        }
-    }
-    
 }
 
+// MARK: - Fetch Capsules
+extension CapsulesViewController {
+    
+    func fetchCapsules(with title: String) {
+        let context = SelectContext.getContext(title)
+        context?.fetchCapsules(title, viewModel: capsulesViewModel)
+    }
+}
+
+// MARK: - Update Views Operations
 extension CapsulesViewController: ICapsulesViewController {
     
     func didUpdateCapsules(capsules: [Capsules]) {
         spaceXCapsules.removeAll()
         capsulesTableView.reloadData()
         capsulesTableView.separatorStyle = .none
-        loadingIndicator.isHidden = false
+        loadingUIView.isHidden = false
   
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 , execute: {
-            self.loadingIndicator.isHidden = true
             self.spaceXCapsules = capsules
             self.capsulesTableView.reloadData()
+            self.loadingUIView.isHidden = true
             self.capsulesTableView.separatorStyle = .singleLine
         })
     }
@@ -100,6 +92,7 @@ extension CapsulesViewController: ICapsulesViewController {
     }
 }
 
+// MARK: - Table View Operations
 extension CapsulesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,11 +100,27 @@ extension CapsulesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = capsulesTableView.dequeueReusableCell(withIdentifier: K.App.reuseIdentifier, for: indexPath) as? CapsulesTableViewCell else { return UITableViewCell() }
-        let capsule = spaceXCapsules[indexPath.row]
+        guard let cell = capsulesTableView
+                .dequeueReusableCell(
+                    withIdentifier: K.App.reuseIdentifier,
+                    for: indexPath) as? CapsulesTableViewCell else { return UITableViewCell() }
         
+        let capsule = spaceXCapsules[indexPath.row]
         cell.configureUI(with: capsule)
         
         return cell
+    }
+}
+
+// MARK: - Configure View Operations
+extension CapsulesViewController {
+    
+    func configureView() {
+        capsulesTableView.dataSource = self
+        capsulesTableView.separatorStyle = .none
+        capsulesTableView.register(UINib(nibName: K.App.nibName, bundle: nil), forCellReuseIdentifier: K.App.reuseIdentifier)
+        
+        loadingUIView.layer.cornerRadius = 6
+        loadingUIView.isHidden = true
     }
 }

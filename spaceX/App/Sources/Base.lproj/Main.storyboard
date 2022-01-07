@@ -41,9 +41,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LgG-Qf-9If">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vV-sb-nFg">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LgG-Qf-9If">
+                                        <rect key="frame" x="40" y="40" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="U6g-vo-fLB"/>
+                                    <constraint firstAttribute="width" constant="100" id="gg8-m7-ddb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,10 +62,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9L-3T-XuK" secondAttribute="trailing" constant="70" id="0R2-aG-VkZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vtk-B5-Af3" secondAttribute="trailing" constant="20" id="BWa-Qu-Onf"/>
                             <constraint firstItem="Vtk-B5-Af3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Da9-gA-Auc"/>
-                            <constraint firstItem="LgG-Qf-9If" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nb1-eW-Vnc"/>
+                            <constraint firstItem="2vV-sb-nFg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G62-ho-YJg"/>
                             <constraint firstItem="Vtk-B5-Af3" firstAttribute="top" secondItem="a9L-3T-XuK" secondAttribute="bottom" constant="8" symbolic="YES" id="UbE-Ai-nu4"/>
+                            <constraint firstItem="2vV-sb-nFg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WHc-Xp-uDt"/>
                             <constraint firstItem="a9L-3T-XuK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="b2O-93-ICr"/>
-                            <constraint firstItem="LgG-Qf-9If" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jDu-ev-GgA"/>
                             <constraint firstItem="Vtk-B5-Af3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="npu-vR-Y1R"/>
                             <constraint firstItem="a9L-3T-XuK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="tEZ-fo-uCQ"/>
                         </constraints>
@@ -69,6 +80,7 @@
                     <connections>
                         <outlet property="capsulesTableView" destination="Vtk-B5-Af3" id="FJ7-hN-whB"/>
                         <outlet property="loadingIndicator" destination="LgG-Qf-9If" id="5cq-MA-Kbg"/>
+                        <outlet property="loadingUIView" destination="2vV-sb-nFg" id="cDX-be-Wjs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,6 +110,9 @@
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
