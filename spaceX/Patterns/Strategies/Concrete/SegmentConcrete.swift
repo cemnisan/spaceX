@@ -8,20 +8,20 @@
 import Foundation
 
 struct FetchAllCapsules: ISegmentStrategy {
-    func fetchCapsulesWithSegmentTitle(title segmentTitle: String, from viewModel: CapsulesViewModel) {
-        viewModel.fetchAllCapsules()
+    func fetchCapsulesWithSegmentTitle() -> String {
+        return "All Capsules"
     }
 }
 
 struct FetchUpComingCapsules: ISegmentStrategy {
-    func fetchCapsulesWithSegmentTitle(title segmentTitle: String, from viewModel: CapsulesViewModel) {
-        viewModel.fetchUpComingCapsules()
+    func fetchCapsulesWithSegmentTitle() -> String {
+        return "Up Coming"
     }
 }
 
 struct FetchPastCapsules: ISegmentStrategy {
-    func fetchCapsulesWithSegmentTitle(title segmentTitle: String, from viewModel: CapsulesViewModel) {
-        viewModel.fetchPastCapsules()
+    func fetchCapsulesWithSegmentTitle() -> String {
+        return "Past"
     }
 }
 

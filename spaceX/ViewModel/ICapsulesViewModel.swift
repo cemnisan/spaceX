@@ -8,11 +8,8 @@
 import Foundation
 
 protocol ICapsulesViewModel {
-    var networkService: INetworkService { get }
     var capsules:[Capsules] { get }
 
-    func fetchAllCapsules()
-    func fetchUpComingCapsules()
-    func fetchPastCapsules()
+    func fetchCapsulesWithSegmentTitle(title segmentTitle: String)
     func changeLoad()
 }

@@ -14,7 +14,7 @@ protocol ICapsulesViewController: AnyObject {
 }
 
 // MARK: - Initialize
-class CapsulesViewController: UIViewController {
+final class CapsulesViewController: UIViewController {
     
     @IBOutlet weak var loadingUIView: UIView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -24,7 +24,7 @@ class CapsulesViewController: UIViewController {
     private var spaceXCapsules = [Capsules]()
     
     private lazy var capsulesViewModel: CapsulesViewModel = {
-        return CapsulesViewModel(networkService: NetworkService(), delegate: self)
+        return CapsulesViewModel(delegate: self)
     }()
         
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class CapsulesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
        
-        fetchCapsules(with: "All Capsules")
+        fetchCapsulesFromContext(with: "All Capsules")
     }
 }
 
@@ -48,23 +48,23 @@ extension CapsulesViewController {
         
         guard let title = segmentTitle else { return }
         
-        fetchCapsules(with: title)
+        fetchCapsulesFromContext(with: title)
     }
     
     @IBAction func onRefreshPressed(_ sender: Any) {
         guard let title = segmentTitle else { return }
 
-        fetchCapsules(with: title)
+        fetchCapsulesFromContext(with: title)
     }
 }
 
 // MARK: - Fetch Capsules
 extension CapsulesViewController {
     
-    func fetchCapsules(with title: String) {
+    func fetchCapsulesFromContext(with title: String) {
         let context = SelectContext.getContext(title)
         
-        context?.fetchCapsules(title, viewModel: capsulesViewModel)
+        context?.fetchCapsules(from: capsulesViewModel)
     }
 }
 
@@ -114,7 +114,7 @@ extension CapsulesViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - Configure View Operations
+// MARK: - Configure View
 extension CapsulesViewController {
     
     func configureView() {

@@ -8,16 +8,15 @@
 import Alamofire
 import Foundation
 
-public enum NetworkRouter: URLRequestConvertible {
+enum NetworkRouter: URLRequestConvertible {
     case capsules
-    case capsule(serialID: String)
     case upComingCapsules
     case pastCapsules
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .capsules, .capsule, .upComingCapsules, .pastCapsules:
+        case .capsules, .upComingCapsules, .pastCapsules:
             return .get
         }
     }
@@ -27,8 +26,6 @@ public enum NetworkRouter: URLRequestConvertible {
         switch self {
         case .capsules:
             return "/capsules"
-        case .capsule(let serial_id):
-            return "/capsules/\(serial_id)"
         case .upComingCapsules:
             return "/capsules/upcoming"
         case .pastCapsules:
@@ -43,12 +40,25 @@ public enum NetworkRouter: URLRequestConvertible {
     // MARK: - Parameters
     private var parameters: Parameters? {
         switch self {
-        case .capsules, .capsule, .upComingCapsules, .pastCapsules:
+        case .capsules, .upComingCapsules, .pastCapsules:
             return  nil
         }
     }
     
-    public func asURLRequest() throws -> URLRequest {
+    static func getSegmentTitle(title: String) -> NetworkRouter {
+        switch title {
+        case "All Capsules":
+            return .capsules
+        case "Past":
+            return .pastCapsules
+        case "Up Coming":
+            return .upComingCapsules
+        default:
+            return .capsules
+        }
+    }
+    
+    func asURLRequest() throws -> URLRequest {
         let url = try baseURL.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))

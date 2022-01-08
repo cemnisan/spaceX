@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F81775B327652CBA00AD1658 /* CapsulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775B227652CBA00AD1658 /* CapsulesViewModel.swift */; };
-		F81775B62765349500AD1658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775B52765349500AD1658 /* NetworkService.swift */; };
 		F81775BB27653F0600AD1658 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BA27653F0600AD1658 /* HTTPContentType.swift */; };
 		F81775BD27653F1A00AD1658 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BC27653F1A00AD1658 /* HTTPHeader.swift */; };
-		F81775BF27653FAC00AD1658 /* INetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81775BE27653FAC00AD1658 /* INetworkService.swift */; };
 		F8191A30276A4BC000499C92 /* CapsulesStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */; };
 		F8191A34276A4C8F00499C92 /* ICapsulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8191A33276A4C8F00499C92 /* ICapsulesViewModel.swift */; };
 		F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416B1C2763702A0030C4E5 /* AppDelegate.swift */; };
@@ -55,10 +53,8 @@
 
 /* Begin PBXFileReference section */
 		F81775B227652CBA00AD1658 /* CapsulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulesViewModel.swift; sourceTree = "<group>"; };
-		F81775B52765349500AD1658 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F81775BA27653F0600AD1658 /* HTTPContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
 		F81775BC27653F1A00AD1658 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
-		F81775BE27653FAC00AD1658 /* INetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkService.swift; sourceTree = "<group>"; };
 		F8191A2F276A4BC000499C92 /* CapsulesStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulesStatus.swift; sourceTree = "<group>"; };
 		F8191A33276A4C8F00499C92 /* ICapsulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICapsulesViewModel.swift; sourceTree = "<group>"; };
 		F8416B192763702A0030C4E5 /* spaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,15 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F81775B42765347300AD1658 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				F81775B52765349500AD1658 /* NetworkService.swift */,
-				F81775BE27653FAC00AD1658 /* INetworkService.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		F81775B727653EBE00AD1658 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +175,6 @@
 				F8416B4E2763704D0030C4E5 /* Model */,
 				F8416B502763706B0030C4E5 /* View */,
 				F8416B4F276370510030C4E5 /* ViewModel */,
-				F81775B42765347300AD1658 /* Service */,
 				F8416B2A2763702A0030C4E5 /* Info.plist */,
 			);
 			path = spaceX;
@@ -466,7 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81775BD27653F1A00AD1658 /* HTTPHeader.swift in Sources */,
-				F81775B62765349500AD1658 /* NetworkService.swift in Sources */,
 				F8416B212763702A0030C4E5 /* CapsulesViewController.swift in Sources */,
 				F8191A30276A4BC000499C92 /* CapsulesStatus.swift in Sources */,
 				F8416B1D2763702A0030C4E5 /* AppDelegate.swift in Sources */,
@@ -479,7 +464,6 @@
 				F8416B5D276374550030C4E5 /* NetworkManager.swift in Sources */,
 				F8416B5B276374270030C4E5 /* NetworkError.swift in Sources */,
 				F89F5EDD2788948E0048747A /* ISegmentStrategy.swift in Sources */,
-				F81775BF27653FAC00AD1658 /* INetworkService.swift in Sources */,
 				F81775B327652CBA00AD1658 /* CapsulesViewModel.swift in Sources */,
 				F8416B1F2763702A0030C4E5 /* SceneDelegate.swift in Sources */,
 				F89F5EDA278894220048747A /* SelectContext.swift in Sources */,

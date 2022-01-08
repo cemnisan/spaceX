@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ISegmentStrategy {
-    func fetchCapsulesWithSegmentTitle(title segmentTitle: String, from viewModel: CapsulesViewModel)
+    func fetchCapsulesWithSegmentTitle() -> String
 }

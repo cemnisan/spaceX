@@ -14,7 +14,9 @@ struct SegmentContext {
         self.strategy = strategy
     }
     
-    func fetchCapsules(_ segmentTitle: String, viewModel: CapsulesViewModel){
-        strategy.fetchCapsulesWithSegmentTitle(title: segmentTitle, from: viewModel)
+    func fetchCapsules(from viewModel: CapsulesViewModel) {
+        let segmentTitle = strategy.fetchCapsulesWithSegmentTitle()
+        
+        viewModel.fetchCapsulesWithSegmentTitle(title: segmentTitle)
     }
 }

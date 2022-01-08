@@ -8,9 +8,9 @@
 import Foundation
 import Alamofire
 
-public typealias Completion<T> = (Result<T, NetworkError>) -> Void where T: Codable
+typealias Completion<T> = (Result<T, NetworkError>) -> Void where T: Codable
 
-public final class NetworkManager {
+final class NetworkManager {
     public static let shared = NetworkManager()
     
     private init() {}
@@ -23,14 +23,17 @@ extension NetworkManager {
                                    completion: @escaping Completion<T>) {
        do {
            let urlRequest = try requestRoute.asURLRequest()
-           
-           AF.request(urlRequest).validate().responseJSON { (response) in
+        
+           AF.request(urlRequest)
+            .validate()
+            .responseJSON { (response) in
                switch response.result {
                case .success(let data):
                    do {
-                       let resultsData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-                       let jsonResults = try JSONDecoder().decode(responseModel, from: resultsData)
-        
+                       let resultsData = try JSONSerialization.data(withJSONObject: data,
+                                                                    options: .prettyPrinted)
+                       let jsonResults = try JSONDecoder().decode(responseModel,
+                                                                  from: resultsData)
                        completion(.success(jsonResults))
                    } catch {
                        completion(.failure(.parseError))
@@ -43,5 +46,4 @@ extension NetworkManager {
            completion(.failure(.badUrlError))
        }
    }
-    
 }
